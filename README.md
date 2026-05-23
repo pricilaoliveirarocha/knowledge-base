@@ -17,34 +17,15 @@ Este repositório reúne meus estudos, práticas e desafios de programação em 
 ```text
 knowledge-base/
 │
-├── javascript/
-│   ├── estudos/
-│   │   ├── 01-variaveis_e_arrays.js
-│   │   └── 02-funcoes.js
-│   │
-│   └── desafios/
-│       ├── desafio-01.js
-│       └── desafio-02.js
-│
 ├── php/
-│   ├── estudos/
-│   │   ├── 01-variaveis.php
-│   │   └── 02-arrays.php
+│   ├── study/
+│   │   ├── 01-variables_and_arrays.js
+│   │   ├── 02-functions.js
+│   │   ├── 03-how_to_use_enums.js
 │   │
-│   └── desafios/
-│       ├── desafio-01.php
-│       └── desafio-02.php
-│
-├── python/
-│   ├── estudos/
-│   │   ├── 01-variaveis.py
-│   │   └── 02-listas.py
-│   │
-│   └── desafios/
-│       ├── desafio-01.py
-│       └── desafio-02.py
-│
-└── README.md
+│   └── challenges/
+│       └── 01-arrays.js
+└── readme.md
 ```
 
 ---
