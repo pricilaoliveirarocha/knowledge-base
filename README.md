@@ -8,7 +8,7 @@
 
 Bem-vinda à minha base de conhecimento! ✨
 
-Este repositório reúne meus estudos, práticas e desafios de programação em JavaScript, PHP e Python. A proposta é manter os conteúdos organizados, fáceis de consultar e em constante evolução.
+Este repositório reúne meus estudos, práticas e desafios de programação, com foco atual em PHP e espaço para crescer para outras linguagens ao longo do tempo.
 
 ---
 
@@ -16,17 +16,13 @@ Este repositório reúne meus estudos, práticas e desafios de programação em 
 
 ```text
 knowledge-base/
-│
-├── php/
-│   ├── study/
-│   │   ├── 01-variables_and_arrays.js
-│   │   ├── 02-functions.js
-│   │   ├── 03-how_to_use_enums.js
-│   │
-│   └── challenges/
-│       └── 01-arrays.js
-└── readme.md
+|-- php/
+|   `-- estudos/
+|       `-- 01-variaveis.php
+`-- README.md
 ```
+
+No momento, a base começa com um primeiro arquivo de estudos em PHP e será expandida gradualmente.
 
 ---
 
@@ -38,18 +34,17 @@ Centralizar minha jornada de aprendizado em programação, registrando conceitos
 
 ## 🧠 Organização
 
-Cada linguagem possui duas pastas principais:
+Conforme o repositório crescer, cada linguagem terá duas pastas principais:
 
 - `estudos/`: anotações, exemplos e práticas iniciais.
 - `desafios/`: exercícios para fixar conceitos e desenvolver lógica.
 
 ---
 
-## 🌷 Sobre
-
+<small>
 Este projeto representa uma jornada contínua de aprendizado, prática e evolução.
-
 Com organização, constância e curiosidade, cada linha de código se transforma em crescimento. 💻✨
+</small>
 
 ---
 
@@ -57,7 +52,7 @@ Com organização, constância e curiosidade, cada linha de código se transform
 
 Welcome to my knowledge base! ✨
 
-This repository brings together my programming studies, practices, and challenges in JavaScript, PHP, and Python. The goal is to keep everything organized, easy to access, and constantly evolving.
+This repository brings together my programming studies, practice, and challenges, with a current focus on PHP and room to grow into other languages over time.
 
 ---
 
@@ -65,38 +60,15 @@ This repository brings together my programming studies, practices, and challenge
 
 ```text
 knowledge-base/
-│
-├── javascript/
-│   ├── estudos/
-│   │   ├── 01-variaveis_e_arrays.js
-│   │   └── 02-funcoes.js
-│   │
-│   └── desafios/
-│       ├── desafio-01.js
-│       └── desafio-02.js
-│
-├── php/
-│   ├── estudos/
-│   │   ├── 01-variaveis.php
-│   │   └── 02-arrays.php
-│   │
-│   └── desafios/
-│       ├── desafio-01.php
-│       └── desafio-02.php
-│
-├── python/
-│   ├── estudos/
-│   │   ├── 01-variaveis.py
-│   │   └── 02-listas.py
-│   │
-│   └── desafios/
-│       ├── desafio-01.py
-│       └── desafio-02.py
-│
-└── README.md
+|-- php/
+|   `-- estudos/
+|       `-- 01-variaveis.php
+`-- README.md
 ```
 
-> Folder names are kept in Portuguese to match the actual project structure.
+Right now, the knowledge base starts with a first PHP study file and will expand gradually over time.
+
+> Folder names are kept in Portuguese to match the repository's structure.
 
 ---
 
@@ -108,16 +80,14 @@ To centralize my programming learning journey by documenting concepts, examples,
 
 ## 🧠 Organization
 
-Each language has two main folders:
+As the repository grows, each language will be organized into two main folders:
 
 - `estudos/`: notes, examples, and beginner-friendly practice.
 - `desafios/`: exercises to reinforce concepts and improve logic.
 
 ---
 
-## 🌷 About
-
+<small>
 This project represents a continuous journey of learning, practice, and growth.
-
 With organization, consistency, and curiosity, every line of code becomes progress. 💻✨
-# knowledge-base
+</small>
