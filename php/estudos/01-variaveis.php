@@ -45,16 +45,19 @@ echo get_debug_type($habilidades) . ' -> ' . json_encode($habilidades, JSON_UNES
 echo get_debug_type($usuario) . ' -> ' . json_encode($usuario, JSON_UNESCAPED_UNICODE) . PHP_EOL;
 
 /* ------------------------------ & Referencial ----------------------------- */
+
 /* Em PHP, o & antes de uma variável indica referência. 
 Referência significa que duas variáveis passam a apontar para o mesmo valor na memória lógica do PHP. 
 Então, ao alterar uma, você altera a variável principal também. A documentação oficial define isso como passagem/uso por referência, permitindo que uma função ou variável modifique o mesmo conteúdo referenciado.
 */
 
+eol('Referências');
+
 // Atribuição por referência
 $nome = 'Pricila';
 $apelido = &$nome;
 $apelido = 'Pri';
-echo $nome; // Pri
+echo $nome . PHP_EOL; // Pri
 
 // Parâmetro por referência
 /* O &$numero indica que o parâmetro será recebido por referência.
@@ -65,9 +68,7 @@ function incrementar(int &$numero): void {
 }
 $idade = 25;
 incrementar($idade);
-echo $idade; // 26
-
-eol('Referências');
+echo $idade . PHP_EOL; // 26
 
 // Foreach por referência
 /* código percorre o array por referência, ou seja, a variável $valor aponta diretamente para cada item real dentro de $valores.
