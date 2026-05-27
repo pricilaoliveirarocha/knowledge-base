@@ -1,29 +1,20 @@
 {
     // =================== Window & Workspace (Minimalismo) ===================
+    "window.zoomLevel": -0.5,
     "workbench.startupEditor": "none",
     "workbench.secondarySideBar.defaultVisibility": "visible",
     "workbench.panel.defaultLocation": "bottom",
     "workbench.sideBar.location": "right",
     "window.commandCenter": false,
-    "window.newWindowProfile": "Default",
-    "window.confirmSaveUntitledWorkspace": false,
-    "security.workspace.trust.untrustedFiles": "open",
 
     // =================== Editor (UX & Estética) ===================
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Better Material Theme Darker High Contrast",
     "editor.suggestSelection": "first",
-    "editor.fontSize": 14,
+    "editor.fontSize": 13,
     "editor.fontFamily": "'Fira Code'",
     "editor.fontLigatures": true,
-    "editor.lineHeight": 20,
+    "editor.lineHeight": 19,
     "editor.fontWeight": "300",
-    "editor.cursorBlinking": "smooth",
-    "editor.wordWrap": "on",
-    "editor.minimap.enabled": false,
-    "editor.stickyScroll.enabled": true,
-    "editor.semanticHighlighting.enabled": true,
-    "editor.quickSuggestionsDelay": 3,
 
     // =================== Tema e Paleta (Feminino & Elegante) ===================
     "workbench.colorCustomizations": {
@@ -213,4 +204,6 @@
         },
     },
     "terminal.integrated.initialHint": false,
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Pink Candy Dark",
 }
