@@ -1,6 +1,6 @@
 {
     // =================== Window & Workspace (Minimalismo) ===================
-    "window.zoomLevel": -0.5,
+    "window.zoomLevel": -0.2,
     "workbench.startupEditor": "none",
     "workbench.secondarySideBar.defaultVisibility": "visible",
     "workbench.panel.defaultLocation": "bottom",
@@ -8,13 +8,36 @@
     "window.commandCenter": false,
 
     // =================== Editor (UX & Estética) ===================
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.suggestSelection": "first",
-    "editor.fontSize": 13,
-    "editor.fontFamily": "'Fira Code'",
-    "editor.fontLigatures": true,
-    "editor.lineHeight": 19,
+    "editor.fontFamily": "'Fira Code', monospace",
     "editor.fontWeight": "300",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.lineHeight": 20,
+
+    // =================== Terminal (Minimalista & Elegante) ===================
+    "terminal.integrated.fontFamily": "'Fira Code', 'Segoe UI Emoji', Consolas, monospace",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontLigatures.enabled": true,
+    "terminal.integrated.fontWeight": "300",
+
+    // Cursor suave e delicado
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorWidth": 1,
+    "terminal.integrated.cursorBlinking": true,
+
+    // Limpeza Visual Extrema
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+
+    // Configuração do Sistema (Git Bash)
+    "terminal.integrated.profiles.windows": {
+        "Git Bash": {
+            "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+            "args": ["--login", "-i"],
+        },
+    },
+    "terminal.integrated.initialHint": false,
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Andromeda",
 
     // =================== Tema e Paleta (Feminino & Elegante) ===================
     "workbench.colorCustomizations": {
@@ -181,29 +204,4 @@
 
     "editor.inlineSuggest.edits.allowCodeShifting": "horizontal",
     "editor.inlineSuggest.edits.showCollapsed": true,
-
-    // =================== Terminal (Minimalista & Elegante) ===================
-    "terminal.integrated.fontFamily": "'Cascadia Code', 'Segoe UI Emoji', Consolas, monospace",
-    "terminal.integrated.fontSize": 13,
-    "terminal.integrated.fontLigatures.enabled": true,
-    "terminal.integrated.fontWeight": "300",
-
-    // Cursor suave e delicado
-    "terminal.integrated.cursorStyle": "line",
-    "terminal.integrated.cursorWidth": 1,
-    "terminal.integrated.cursorBlinking": true,
-
-    // Limpeza Visual Extrema
-    "terminal.integrated.enableMultiLinePasteWarning": "never",
-
-    // Configuração do Sistema (Git Bash)
-    "terminal.integrated.profiles.windows": {
-        "Git Bash": {
-            "path": "C:\\Program Files\\Git\\bin\\bash.exe",
-            "args": ["--login", "-i"],
-        },
-    },
-    "terminal.integrated.initialHint": false,
-    "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Pink Candy Dark",
 }
