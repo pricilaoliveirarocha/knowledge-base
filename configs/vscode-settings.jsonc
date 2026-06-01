@@ -1,69 +1,34 @@
 {
-    // =================== Window & Workspace (Minimalismo) ===================
-    "window.zoomLevel": -0.2,
+    // =================== Window & Workspace ===================
+    "window.zoomLevel": -0.5,
     "workbench.startupEditor": "none",
     "workbench.secondarySideBar.defaultVisibility": "visible",
     "workbench.panel.defaultLocation": "bottom",
-    "workbench.sideBar.location": "right",
+    "workbench.iconTheme": "material-icon-theme",
     "window.commandCenter": false,
 
     // =================== Editor (UX & Estética) ===================
-    "editor.fontFamily": "'Fira Code', monospace",
+    "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
     "editor.fontWeight": "300",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
     "editor.lineHeight": 20,
-
-    // =================== Terminal (Minimalista & Elegante) ===================
-    "terminal.integrated.fontFamily": "'Fira Code', 'Segoe UI Emoji', Consolas, monospace",
-    "terminal.integrated.fontSize": 14,
-    "terminal.integrated.fontLigatures.enabled": true,
-    "terminal.integrated.fontWeight": "300",
-
-    // Cursor suave e delicado
-    "terminal.integrated.cursorStyle": "line",
-    "terminal.integrated.cursorWidth": 1,
-    "terminal.integrated.cursorBlinking": true,
-
-    // Limpeza Visual Extrema
-    "terminal.integrated.enableMultiLinePasteWarning": "never",
-
-    // Configuração do Sistema (Git Bash)
-    "terminal.integrated.profiles.windows": {
-        "Git Bash": {
-            "path": "C:\\Program Files\\Git\\bin\\bash.exe",
-            "args": ["--login", "-i"],
-        },
-    },
-    "terminal.integrated.initialHint": false,
+    "editor.suggestSelection": "first",
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Andromeda",
+    "workbench.colorTheme": "Monokai",
 
-    // =================== Tema e Paleta (Feminino & Elegante) ===================
-    "workbench.colorCustomizations": {
-        "editor.foldBackground": "#00000000",
-        "editorFoldingRangeForeground": "#00000000",
+    // Cursor suave, porém leve
+    "editor.cursorSmoothCaretAnimation": "explicit",
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 2,
+    "editor.smoothScrolling": false,
 
-        // Guias de Indentação: Cinza leve inativo, Rosa suave ativo
-        "editorIndentGuide.background1": "#e2e8f033",
-        "editorIndentGuide.activeBackground1": "#f48fb199",
-
-        // Git Gutter: Cores mais pastéis e suaves
-        "editorGutter.modifiedBackground": "#60a5fa",
-        "editorGutter.addedBackground": "#4ade80",
-        "editorGutter.deletedBackground": "#fb7185",
-        "minimapGutter.modifiedBackground": "#60a5fa",
-        "minimapGutter.addedBackground": "#4ade80",
-        "minimapGutter.deletedBackground": "#fb7185",
-        "editorOverviewRuler.modifiedForeground": "#60a5fa",
-        "editorOverviewRuler.addedForeground": "#4ade80",
-        "editorOverviewRuler.deletedForeground": "#fb7185",
-    },
-
-    // =================== Editor (Indent / Guides) ===================
+    // =================== Editor (Indentação & Guias) ===================
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
     "editor.detectIndentation": false,
+
     "editor.guides.indentation": true,
     "editor.guides.highlightActiveIndentation": true,
     "editor.bracketPairColorization.enabled": true,
@@ -71,28 +36,55 @@
     "editor.guides.bracketPairsHorizontal": true,
     "editor.guides.highlightActiveBracketPair": true,
 
-    // =================== Editor (Auto) ===================
+    // =================== Editor (Automação) ===================
     "editor.autoClosingQuotes": "always",
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
+
+    // =================== Files ===================
+    "files.autoSave": "onFocusChange",
+    "files.autoSaveDelay": 800,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+
+    "files.exclude": {
+        "**.git": true,
+        ".pytest_cache": true,
+        "**/__pycache__": true,
+    },
+
+    // =================== Search & Watcher (Performance) ===================
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/vendor": true,
+        "**/dist": true,
+        "**/build": true,
+        "**/.git": true,
+        "**/.pytest_cache": true,
+        "**/__pycache__": true,
+    },
+
+    "files.watcherExclude": {
+        "**/node_modules/**": true,
+        "**/vendor/**": true,
+        "**/dist/**": true,
+        "**/build/**": true,
+        "**/.git/**": true,
+        "**/.pytest_cache/**": true,
+        "**/__pycache__/**": true,
+    },
+
+    // =================== Explorer ===================
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
 
     // =================== Emmet ===================
     "emmet.showSuggestionsAsSnippets": true,
     "emmet.includeLanguages": {
         "php": "html",
         "javascriptreact": "javascript",
-    },
-
-    // =================== Explorer & Files ===================
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmPasteNative": false,
-    "files.autoSave": "onFocusChange",
-    "files.autoSaveDelay": 800,
-    "files.exclude": {
-        "**.git": true,
-        ".pytest_cache": true,
-        "**/__pycache__": true,
     },
 
     // =================== Git ===================
@@ -102,37 +94,26 @@
     "git.enableSmartCommit": true,
     "git.openRepositoryInParentFolders": "always",
     "git.ignoreRebaseWarning": true,
+
     "scm.diffDecorations": "all",
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.codeLens": true,
 
-    // =================== Language Specific (PHP 8.5, JS, Python) ===================
+    // =================== PHP / Intelephense ===================
     "intelephense.environment.phpVersion": "8.5.0",
     "intelephense.format.braces": "k&r",
+
     "intelephense.diagnostics.undefinedSymbols": false,
     "intelephense.diagnostics.undefinedTypes": false,
     "intelephense.diagnostics.typeErrors": false,
+
     "intelephense.codeLens.usages.enable": true,
     "intelephense.codeLens.references.enable": true,
     "intelephense.codeLens.parent.enable": true,
     "intelephense.codeLens.overrides.enable": true,
     "intelephense.codeLens.implementations.enable": true,
 
-    "[javascript]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-    },
-    "[javascriptreact]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-    },
-    "[html]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.tabSize": 4,
-        "editor.insertSpaces": true,
-        "editor.detectIndentation": false,
-    },
+    // =================== Language Specific ===================
     "[php]": {
         "editor.tabSize": 4,
         "editor.insertSpaces": true,
@@ -140,29 +121,54 @@
         "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
         "editor.detectIndentation": false,
     },
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
+
+    "[javascript]": {
         "editor.formatOnSave": true,
-    },
-    "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
     },
-    "[jsonc]": {
+
+    "[javascriptreact]": {
+        "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
     },
-    "[snippets]": {
-        "editor.defaultFormatter": "vscode.json-language-features",
+
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
     },
-    "[vue]": {
-        "editor.defaultFormatter": "Vue.volar",
-    },
+
     "[typescriptreact]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
     },
-    "[typescript]": {
+
+    "[html]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+    },
+
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+
+    "[snippets]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+    },
+
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar",
+    },
+
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
     },
 
     // =================== Prettier ===================
@@ -181,6 +187,28 @@
     "html.format.indentInnerHtml": true,
     "html.format.templating": true,
 
+    // =================== Terminal ===================
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+    "terminal.integrated.profiles.windows": {
+        "Git Bash": {
+            "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+            "args": ["--login", "-i"],
+        },
+    },
+
+    "terminal.integrated.fontFamily": "'Cascadia Code', 'Segoe UI Emoji', Consolas, monospace",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontLigatures.enabled": true,
+    "terminal.integrated.fontWeight": "300",
+
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorWidth": 2,
+    "terminal.integrated.cursorBlinking": true,
+
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "terminal.integrated.initialHint": false,
+
     // =================== Ferramentas & AI ===================
     "debug.console.closeOnEnd": true,
     "js/ts.suggest.autoImports": true,
@@ -193,6 +221,7 @@
         "javascript": true,
         "php": true,
     },
+
     "github.copilot.nextEditSuggestions.enabled": false,
     "github.copilot.nextEditSuggestions.fixes": false,
 
@@ -204,4 +233,32 @@
 
     "editor.inlineSuggest.edits.allowCodeShifting": "horizontal",
     "editor.inlineSuggest.edits.showCollapsed": true,
+    "workbench.activityBar.location": "top",
+    "workbench.colorCustomizations": {
+        "editor.foldBackground": "#00000000",
+        "editorFoldingRangeForeground": "#00000000",
+
+        "editor.lineHighlightBackground": "#00000000",
+        "editor.inactiveLineHighlightBackground": "#00000000",
+        "editor.lineHighlightBorder": "#00000000",
+
+        "editorLineNumber.foreground": "#e2e8f080",
+        "editorLineNumber.activeForeground": "#f48fb1",
+
+        "editorIndentGuide.background1": "#e2e8f033",
+        "editorIndentGuide.activeBackground1": "#f48fb199",
+
+        "editorGutter.modifiedBackground": "#60a5fa",
+        "editorGutter.addedBackground": "#4ade80",
+        "editorGutter.deletedBackground": "#fb7185",
+
+        "minimapGutter.modifiedBackground": "#60a5fa",
+        "minimapGutter.addedBackground": "#4ade80",
+        "minimapGutter.deletedBackground": "#fb7185",
+
+        "editorOverviewRuler.modifiedForeground": "#60a5fa",
+        "editorOverviewRuler.addedForeground": "#4ade80",
+        "editorOverviewRuler.deletedForeground": "#fb7185",
+    },
+    "workbench.sideBar.location": "right",
 }
