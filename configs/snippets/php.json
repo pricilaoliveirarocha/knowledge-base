@@ -1,5 +1,4 @@
 {
-    /* ---------------------------------- Debug --------------------------------- */
     "Debug var_dump": {
         "prefix": "vd",
         "body": [
@@ -7,7 +6,6 @@
         ],
         "description": "Exibe o tipo e o valor de uma variável usando var_dump."
     },
-    /* --------------------------------- PHP Doc -------------------------------- */
     "PHPDoc completo": {
         "prefix": "phpdoc",
         "body": [
@@ -27,7 +25,6 @@
         ],
         "description": "Cria um PHPDoc completo com data atual em @since e @updated."
     },
-    /* ----------------------------- PHP Doc updated ---------------------------- */
     "PHPDoc atualização": {
         "prefix": "phpdocup",
         "body": [
@@ -35,7 +32,6 @@
         ],
         "description": "Gera linha @updated com autor e data atual."
     },
-    /* --------------------------- funçao com Trycatch -------------------------- */
     "Função com try/catch Throwable": {
         "prefix": "phpfun",
         "body": [
@@ -45,12 +41,12 @@
             "",
             "        return ${6:[]};",
             "    } catch (\\Throwable \\$th) {",
-            "        ${7:handlerError(\\$th);}",
+            "        geralog(\\$th);",
             "",
-            "        return ${8:[]};",
+            "        return ${7:[]};",
             "    }",
             "}$0"
         ],
-        "description": "Cria uma função/método PHP com bloco try/catch capturando Throwable."
+        "description": "Cria uma função/método PHP com bloco try/catch capturando Throwable e registrando erro com geralog."
     }
 }
