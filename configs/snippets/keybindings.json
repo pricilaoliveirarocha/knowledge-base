@@ -5,26 +5,20 @@
     // =========================================================================
 
     // Abre o seletor de branches do Git para trocar de branch.
-    // Condição:
-    // - não executa enquanto houver uma operação em andamento;
-    // - só funciona quando existir repositório Git aberto no workspace.
     // Atalho em sequência: Ctrl + . e depois .
     {
         "key": "ctrl+oem_period oem_period",
         "command": "git.checkout",
-        "when": "!operationInProgress && gitOpenRepositoryCount != 0"
+        "when": "!operationInProgress && gitOpenRepositoryCount != 0",
     },
 
     // Faz checkout em modo detached HEAD.
     // Útil para acessar commit, tag ou referência específica sem trocar para uma branch ativa.
-    // Condição:
-    // - não executa enquanto houver uma operação em andamento;
-    // - só funciona quando existir repositório Git aberto no workspace.
     // Atalho em sequência: Ctrl + . e depois ,
     {
         "key": "ctrl+oem_period oem_comma",
         "command": "git.checkoutDetached",
-        "when": "!operationInProgress && gitOpenRepositoryCount != 0"
+        "when": "!operationInProgress && gitOpenRepositoryCount != 0",
     },
 
     // =========================================================================
@@ -32,13 +26,19 @@
     // =========================================================================
 
     // Abre a view secundária da extensão Codex no VS Code.
-    // Condição:
-    // - só funciona quando a view secundária do Codex estiver habilitada.
     // Atalho em sequência: Ctrl + Shift + C e depois Ctrl + Shift + O
     {
         "key": "ctrl+shift+c ctrl+shift+o",
         "command": "workbench.view.extension.codexSecondaryViewContainer",
-        "when": "viewContainer.workbench.view.extension.codexSecondaryViewContainer.enabled"
+        "when": "viewContainer.workbench.view.extension.codexSecondaryViewContainer.enabled",
+    },
+
+    // Fecha ou alterna a visibilidade da Secondary Side Bar.
+    // Use quando o Codex estiver aberto na barra secundária.
+    // Atalho em sequência: Ctrl + Shift + C e depois Ctrl + Shift + X
+    {
+        "key": "ctrl+shift+c ctrl+shift+x",
+        "command": "workbench.action.toggleAuxiliaryBar",
     },
 
     // =========================================================================
@@ -46,16 +46,43 @@
     // =========================================================================
 
     // Abre a lista de snippets disponíveis para a linguagem atual.
-    // Exemplo:
-    // - em arquivo .php, mostra snippets PHP;
-    // - em arquivo .js, mostra snippets JavaScript;
-    // - em arquivo .json, mostra snippets JSON.
-    // Condição:
-    // - só funciona quando o foco está dentro do editor de código.
     // Atalho direto: Ctrl + Alt + S
     {
         "key": "ctrl+alt+s",
         "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus"
-    }
+        "when": "editorTextFocus",
+    },
+
+    // Insere diretamente o snippet PHP de var_dump.
+    // Atalho direto: Ctrl + Alt + D
+    {
+        "key": "ctrl+alt+d",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == php",
+        "args": {
+            "name": "Debug var_dump",
+        },
+    },
+
+    // Insere diretamente o snippet PHPDoc completo.
+    // Atalho direto: Ctrl + Alt + P
+    {
+        "key": "ctrl+alt+p",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == php",
+        "args": {
+            "name": "PHPDoc completo",
+        },
+    },
+
+    // Insere diretamente a linha @updated do PHPDoc.
+    // Atalho direto: Ctrl + Alt + U
+    {
+        "key": "ctrl+alt+u",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == php",
+        "args": {
+            "name": "PHPDoc atualização",
+        },
+    },
 ]
