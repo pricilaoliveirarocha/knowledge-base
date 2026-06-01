@@ -1,0 +1,164 @@
+{
+    "Console log": {
+        "prefix": "cl",
+        "body": [
+            "console.log('${1:label}:', ${2:value});$0"
+        ],
+        "description": "Exibe uma variável ou valor no console com label."
+    },
+    "Console table": {
+        "prefix": "ct",
+        "body": [
+            "console.table(${1:data});$0"
+        ],
+        "description": "Exibe arrays ou objetos em formato de tabela no console."
+    },
+    "Try catch": {
+        "prefix": "tryc",
+        "body": [
+            "try {",
+            "    ${1:// código}",
+            "} catch (error) {",
+            "    console.error('Erro:', error);",
+            "}$0"
+        ],
+        "description": "Cria bloco try/catch simples para tratamento de erro."
+    },
+    "Async function with try catch": {
+        "prefix": "afn",
+        "body": [
+            "async function ${1:nomeDaFuncao}(${2:params}) {",
+            "    try {",
+            "        ${3:// código assíncrono}",
+            "    } catch (error) {",
+            "        console.error('Erro em ${1:nomeDaFuncao}:', error);",
+            "        throw error;",
+            "    }",
+            "}$0"
+        ],
+        "description": "Cria uma função async com try/catch e relançamento do erro."
+    },
+    "Fetch GET": {
+        "prefix": "fget",
+        "body": [
+            "async function ${1:buscarDados}() {",
+            "    const response = await fetch('${2:url}');",
+            "",
+            "    if (!response.ok) {",
+            "        throw new Error(`Erro HTTP: ${response.status}`);",
+            "    }",
+            "",
+            "    return await response.json();",
+            "}$0"
+        ],
+        "description": "Cria chamada GET usando fetch com validação de response.ok."
+    },
+    "Fetch POST JSON": {
+        "prefix": "fpost",
+        "body": [
+            "async function ${1:enviarDados}(${2:dados}) {",
+            "    const response = await fetch('${3:url}', {",
+            "        method: 'POST',",
+            "        headers: {",
+            "            'Content-Type': 'application/json'",
+            "        },",
+            "        body: JSON.stringify(${2:dados})",
+            "    });",
+            "",
+            "    if (!response.ok) {",
+            "        throw new Error(`Erro HTTP: ${response.status}`);",
+            "    }",
+            "",
+            "    return await response.json();",
+            "}$0"
+        ],
+        "description": "Cria chamada POST JSON usando fetch."
+    },
+    "Fetch with timeout": {
+        "prefix": "ftimeout",
+        "body": [
+            "async function ${1:buscarComTimeout}(${2:url}, ${3:timeoutMs} = 10000) {",
+            "    const controller = new AbortController();",
+            "    const timeoutId = setTimeout(() => controller.abort(), ${3:timeoutMs});",
+            "",
+            "    try {",
+            "        const response = await fetch(${2:url}, {",
+            "            signal: controller.signal",
+            "        });",
+            "",
+            "        if (!response.ok) {",
+            "            throw new Error(`Erro HTTP: ${response.status}`);",
+            "        }",
+            "",
+            "        return await response.json();",
+            "    } finally {",
+            "        clearTimeout(timeoutId);",
+            "    }",
+            "}$0"
+        ],
+        "description": "Cria fetch com timeout usando AbortController."
+    },
+    "DOM ready": {
+        "prefix": "domready",
+        "body": [
+            "document.addEventListener('DOMContentLoaded', () => {",
+            "    ${1:// código}",
+            "});$0"
+        ],
+        "description": "Executa código após o HTML ser carregado e analisado."
+    },
+    "Query selector": {
+        "prefix": "qs",
+        "body": [
+            "const ${1:elemento} = document.querySelector('${2:selector}');$0"
+        ],
+        "description": "Seleciona o primeiro elemento correspondente ao seletor CSS."
+    },
+    "Query selector all": {
+        "prefix": "qsa",
+        "body": [
+            "const ${1:elementos} = document.querySelectorAll('${2:selector}');$0"
+        ],
+        "description": "Seleciona todos os elementos correspondentes ao seletor CSS."
+    },
+    "Add event listener": {
+        "prefix": "ev",
+        "body": [
+            "${1:elemento}.addEventListener('${2:click}', (${3:event}) => {",
+            "    ${4:// código}",
+            "});$0"
+        ],
+        "description": "Adiciona um listener de evento em um elemento."
+    },
+    "LocalStorage set JSON": {
+        "prefix": "lsset",
+        "body": [
+            "localStorage.setItem('${1:chave}', JSON.stringify(${2:valor}));$0"
+        ],
+        "description": "Salva um valor no localStorage convertendo para JSON."
+    },
+    "LocalStorage get JSON": {
+        "prefix": "lsget",
+        "body": [
+            "const ${1:dados} = JSON.parse(localStorage.getItem('${2:chave}') ?? 'null');$0"
+        ],
+        "description": "Lê um valor JSON do localStorage com fallback seguro."
+    },
+    "Debounce": {
+        "prefix": "debounce",
+        "body": [
+            "function debounce(callback, delay = 300) {",
+            "    let timeoutId;",
+            "",
+            "    return (...args) => {",
+            "        clearTimeout(timeoutId);",
+            "",
+            "        timeoutId = setTimeout(() => {",
+            "            callback(...args);",
+            "        }, delay);",
+            "    };",
+            "}$0"
+        ],
+        "description": "Cria função debounce para reduzir execuções repetidas."
+    }
+}
