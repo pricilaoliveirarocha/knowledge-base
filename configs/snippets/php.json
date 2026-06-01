@@ -1,0 +1,56 @@
+{
+    /* ---------------------------------- Debug --------------------------------- */
+    "Debug var_dump": {
+        "prefix": "vd",
+        "body": [
+            "var_dump(\\$${1:variavel});$0"
+        ],
+        "description": "Exibe o tipo e o valor de uma variável usando var_dump."
+    },
+    /* --------------------------------- PHP Doc -------------------------------- */
+    "PHPDoc completo": {
+        "prefix": "phpdoc",
+        "body": [
+            "/**",
+            " * ${1:Descrição objetiva da função ou método.}",
+            " *",
+            " * ${2:Detalhe a regra de negócio, efeito colateral ou comportamento esperado.}",
+            " *",
+            " * @param ${3:array<string, mixed>} \\$${4:dados} ${5:Descrição objetiva do parâmetro.}",
+            " * @return ${6:void|bool|int|float|string|array<string, mixed>|object|mixed} ${7:Descrição objetiva do retorno.}",
+            " * @throws ${8:\\Throwable} ${9:Quando ocorrer uma falha durante a execução.}",
+            " *",
+            " * @since ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR}",
+            " * @updated by ${10:Pricila Oliveira} ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR}",
+            " * @author ${11:Pricila Oliveira}",
+            " */$0"
+        ],
+        "description": "Cria um PHPDoc completo com data atual em @since e @updated."
+    },
+    /* ----------------------------- PHP Doc updated ---------------------------- */
+    "PHPDoc atualização": {
+        "prefix": "phpdocup",
+        "body": [
+            " * @updated by ${1:Pricila Oliveira} in ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR}$0"
+        ],
+        "description": "Gera linha @updated com autor e data atual."
+    },
+    /* --------------------------- funçao com Trycatch -------------------------- */
+    "Função com try/catch Throwable": {
+        "prefix": "phpfun",
+        "body": [
+            "${1|public,protected,private|} function ${2:nomeDaFuncao}(${3:array \\$dados}): ${4:array} {",
+            "    try {",
+            "        ${5:// TODO: implementar regra de negócio}",
+            "",
+            "        return ${6:[]};",
+            "    } catch (\\Throwable \\$th) {",
+            "        ${7:handlerError(\\$th);}",
+            "",
+            "        return ${8:[]};",
+            "    }",
+            "}$0"
+        ],
+        "description": "Cria uma função/método PHP com bloco try/catch capturando Throwable."
+    }
+}
