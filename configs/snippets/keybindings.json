@@ -1,0 +1,61 @@
+// Place your key bindings in this file to override the defaults
+[
+    // =========================================================================
+    // Git
+    // =========================================================================
+
+    // Abre o seletor de branches do Git para trocar de branch.
+    // Condição:
+    // - não executa enquanto houver uma operação em andamento;
+    // - só funciona quando existir repositório Git aberto no workspace.
+    // Atalho em sequência: Ctrl + . e depois .
+    {
+        "key": "ctrl+oem_period oem_period",
+        "command": "git.checkout",
+        "when": "!operationInProgress && gitOpenRepositoryCount != 0"
+    },
+
+    // Faz checkout em modo detached HEAD.
+    // Útil para acessar commit, tag ou referência específica sem trocar para uma branch ativa.
+    // Condição:
+    // - não executa enquanto houver uma operação em andamento;
+    // - só funciona quando existir repositório Git aberto no workspace.
+    // Atalho em sequência: Ctrl + . e depois ,
+    {
+        "key": "ctrl+oem_period oem_comma",
+        "command": "git.checkoutDetached",
+        "when": "!operationInProgress && gitOpenRepositoryCount != 0"
+    },
+
+    // =========================================================================
+    // Codex
+    // =========================================================================
+
+    // Abre a view secundária da extensão Codex no VS Code.
+    // Condição:
+    // - só funciona quando a view secundária do Codex estiver habilitada.
+    // Atalho em sequência: Ctrl + Shift + C e depois Ctrl + Shift + O
+    {
+        "key": "ctrl+shift+c ctrl+shift+o",
+        "command": "workbench.view.extension.codexSecondaryViewContainer",
+        "when": "viewContainer.workbench.view.extension.codexSecondaryViewContainer.enabled"
+    },
+
+    // =========================================================================
+    // Snippets
+    // =========================================================================
+
+    // Abre a lista de snippets disponíveis para a linguagem atual.
+    // Exemplo:
+    // - em arquivo .php, mostra snippets PHP;
+    // - em arquivo .js, mostra snippets JavaScript;
+    // - em arquivo .json, mostra snippets JSON.
+    // Condição:
+    // - só funciona quando o foco está dentro do editor de código.
+    // Atalho direto: Ctrl + Alt + S
+    {
+        "key": "ctrl+alt+s",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus"
+    }
+]
