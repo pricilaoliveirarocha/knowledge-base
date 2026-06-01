@@ -1,88 +1,47 @@
-// Place your key bindings in this file to override the defaults
-[
-    // =========================================================================
-    // Git
-    // =========================================================================
+// =========================================================================
+// Snippets
+// =========================================================================
 
-    // Abre o seletor de branches do Git para trocar de branch.
-    // Atalho em sequência: Ctrl + . e depois .
-    {
-        "key": "ctrl+oem_period oem_period",
-        "command": "git.checkout",
-        "when": "!operationInProgress && gitOpenRepositoryCount != 0",
-    },
+// Abre a lista de snippets disponíveis para a linguagem atual.
+// Exemplo:
+// - em arquivo .php, mostra snippets PHP;
+// - em arquivo .js, mostra snippets JavaScript.
+// Atalho em sequência: Ctrl + K e depois Ctrl + I
+{
+    "key": "ctrl+k ctrl+i",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus"
+},
 
-    // Faz checkout em modo detached HEAD.
-    // Útil para acessar commit, tag ou referência específica sem trocar para uma branch ativa.
-    // Atalho em sequência: Ctrl + . e depois ,
-    {
-        "key": "ctrl+oem_period oem_comma",
-        "command": "git.checkoutDetached",
-        "when": "!operationInProgress && gitOpenRepositoryCount != 0",
-    },
+// Insere diretamente o snippet PHP de var_dump.
+// Atalho em sequência: Ctrl + K e depois D
+{
+    "key": "ctrl+k d",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && editorLangId == php",
+    "args": {
+        "name": "Debug var_dump"
+    }
+},
 
-    // =========================================================================
-    // Codex
-    // =========================================================================
+// Insere diretamente o snippet PHPDoc completo.
+// Atalho em sequência: Ctrl + K e depois P
+{
+    "key": "ctrl+k p",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && editorLangId == php",
+    "args": {
+        "name": "PHPDoc completo"
+    }
+},
 
-    // Abre a view secundária da extensão Codex no VS Code.
-    // Atalho em sequência: Ctrl + Shift + C e depois Ctrl + Shift + O
-    {
-        "key": "ctrl+shift+c ctrl+shift+o",
-        "command": "workbench.view.extension.codexSecondaryViewContainer",
-        "when": "viewContainer.workbench.view.extension.codexSecondaryViewContainer.enabled",
-    },
-
-    // Fecha ou alterna a visibilidade da Secondary Side Bar.
-    // Use quando o Codex estiver aberto na barra secundária.
-    // Atalho em sequência: Ctrl + Shift + C e depois Ctrl + Shift + X
-    {
-        "key": "ctrl+shift+c ctrl+shift+x",
-        "command": "workbench.action.toggleAuxiliaryBar",
-    },
-
-    // =========================================================================
-    // Snippets
-    // =========================================================================
-
-    // Abre a lista de snippets disponíveis para a linguagem atual.
-    // Atalho direto: Ctrl + Alt + S
-    {
-        "key": "ctrl+alt+s",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus",
-    },
-
-    // Insere diretamente o snippet PHP de var_dump.
-    // Atalho direto: Ctrl + Alt + D
-    {
-        "key": "ctrl+alt+d",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && editorLangId == php",
-        "args": {
-            "name": "Debug var_dump",
-        },
-    },
-
-    // Insere diretamente o snippet PHPDoc completo.
-    // Atalho direto: Ctrl + Alt + P
-    {
-        "key": "ctrl+alt+p",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && editorLangId == php",
-        "args": {
-            "name": "PHPDoc completo",
-        },
-    },
-
-    // Insere diretamente a linha @updated do PHPDoc.
-    // Atalho direto: Ctrl + Alt + U
-    {
-        "key": "ctrl+alt+u",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus && editorLangId == php",
-        "args": {
-            "name": "PHPDoc atualização",
-        },
-    },
-]
+// Insere diretamente a linha @updated do PHPDoc.
+// Atalho em sequência: Ctrl + K e depois U
+{
+    "key": "ctrl+k u",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && editorLangId == php",
+    "args": {
+        "name": "PHPDoc atualização"
+    }
+}
