@@ -1,47 +1,51 @@
-// =========================================================================
-// Snippets
-// =========================================================================
-
-// Abre a lista de snippets disponíveis para a linguagem atual.
-// Exemplo:
-// - em arquivo .php, mostra snippets PHP;
-// - em arquivo .js, mostra snippets JavaScript.
-// Atalho em sequência: Ctrl + K e depois Ctrl + I
-{
-    "key": "ctrl+k ctrl+i",
-    "command": "editor.action.insertSnippet",
-    "when": "editorTextFocus"
-},
-
-// Insere diretamente o snippet PHP de var_dump.
-// Atalho em sequência: Ctrl + K e depois D
-{
-    "key": "ctrl+k d",
-    "command": "editor.action.insertSnippet",
-    "when": "editorTextFocus && editorLangId == php",
-    "args": {
-        "name": "Debug var_dump"
-    }
-},
-
-// Insere diretamente o snippet PHPDoc completo.
-// Atalho em sequência: Ctrl + K e depois P
-{
-    "key": "ctrl+k p",
-    "command": "editor.action.insertSnippet",
-    "when": "editorTextFocus && editorLangId == php",
-    "args": {
-        "name": "PHPDoc completo"
-    }
-},
-
-// Insere diretamente a linha @updated do PHPDoc.
-// Atalho em sequência: Ctrl + K e depois U
-{
-    "key": "ctrl+k u",
-    "command": "editor.action.insertSnippet",
-    "when": "editorTextFocus && editorLangId == php",
-    "args": {
-        "name": "PHPDoc atualização"
-    }
-}
+     * @updated by Pricila Oliveira in 31/05/2026
+[
+    {
+        "key": "ctrl+oem_period oem_period",
+        "command": "git.checkout",
+        "when": "!operationInProgress && gitOpenRepositoryCount != 0",
+    },
+    {
+        "key": "ctrl+oem_period oem_comma",
+        "command": "git.checkoutDetached",
+        "when": "!operationInProgress && gitOpenRepositoryCount != 0",
+    },
+    {
+        "key": "ctrl+shift+c ctrl+shift+o",
+        "command": "workbench.view.extension.codexSecondaryViewContainer",
+        "when": "viewContainer.workbench.view.extension.codexSecondaryViewContainer.enabled",
+    },
+    {
+        "key": "ctrl+shift+c ctrl+shift+x",
+        "command": "workbench.action.toggleAuxiliaryBar",
+    },
+    {
+        "key": "ctrl+k ctrl+i",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+    },
+    {
+        "key": "ctrl+k d",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == php",
+        "args": {
+            "name": "Debug var_dump",
+        },
+    },
+    {
+        "key": "ctrl+k p",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == php",
+        "args": {
+            "name": "PHPDoc completo",
+        },
+    },
+    {
+        "key": "ctrl+k u",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == php",
+        "args": {
+            "name": "PHPDoc atualização",
+        },
+    },
+]
