@@ -14,6 +14,23 @@
         ],
         "description": "Exibe o tipo e o valor de uma variável usando var_dump."
     },
+    "Debug JSON": {
+        "prefix": "phpdj",
+        "body": [
+            "die('<pre>' . json_encode(\\$${1:variavel}, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . '</pre>');$0"
+        ],
+        "description": "Exibe uma variável formatada como JSON legível e encerra a execução."
+    },
+    "Debug simples": {
+        "prefix": "phpds",
+        "body": [
+            "echo '<pre>';",
+            "var_dump(\\$${1:variavel});",
+            "echo '</pre>';",
+            "die();$0"
+        ],
+        "description": "Exibe rapidamente o tipo e o valor de uma variável usando var_dump."
+    },
     "PHPDoc completo": {
         "prefix": "phpdoc",
         "body": [
@@ -54,5 +71,62 @@
             "}$0"
         ],
         "description": "Cria uma função/método PHP com bloco try/catch capturando Throwable e registrando erro com geralog."
+    },
+    "MySQLi Query Segura Base": {
+        "prefix": "mysqlsafe",
+        "body": [
+            "\\$sql = \"",
+            "    ${1:SELECT * FROM tabela}",
+            "    ${2:WHERE campo_1 = ? AND campo_2 = ?}",
+            "\"; ",
+            "",
+            "\\$tipos = \"${3:is}\";",
+            "\\$valores = [\\$${4:id}, \\$${5:nome}];",
+            "",
+            "if (strlen(\\$tipos) !== count(\\$valores)) {",
+            "    throw new \\InvalidArgumentException('A quantidade de tipos não corresponde à quantidade de valores.');",
+            "}",
+            "",
+            "\\$stmt = \\$this->db->prepare(\\$sql);",
+            "",
+            "if (!\\$stmt) {",
+            "    throw new \\RuntimeException('Erro ao preparar SQL: ' . \\$db->error);",
+            "}",
+            "",
+            "\\$stmt->bindValue(\\$tipos, ...\\$valores);",
+            "\\$stmt->execute();",
+            "",
+            "${6:\\$result = \\$stmt->get_result();}",
+            "${7:\\$dados = \\$result->fetchAll(MYSQLI_ASSOC);}",
+            "",
+            "\\$stmt->close();",
+            "",
+            "${0:return \\$dados;}"
+        ],
+        "description": "Cria uma query MySQLi segura usando prepare, bind_param, array de valores e argument unpacking."
+    },
+    "PDO Query Segura Base": {
+        "prefix": "pdosafe",
+        "body": [
+            "\\$sql = \"",
+            "    ${1:SELECT * FROM tabela}",
+            "    ${2:WHERE campo_1 = ?}",
+            "\";",
+            "",
+            "\\$valores = [",
+            "    \\$${3:valor_1},",
+            "];",
+            "",
+            "\\$stmt = \\$this->db->prepare(\\$sql);",
+            "",
+            "if (!\\$stmt) {",
+            "    throw new \\RuntimeException('Erro ao preparar SQL.');",
+            "}",
+            "",
+            "\\$stmt->execute(\\$valores);",
+            "",
+            "\\$dados = \\$stmt->fetchAll(PDO::FETCH_ASSOC);",
+        ],
+        "description": "Cria uma query segura com PDO, prepare e execute usando array de parâmetros."
     }
 }
