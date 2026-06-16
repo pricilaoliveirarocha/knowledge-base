@@ -1,4 +1,5 @@
 <?php
+// Ordenação de arrays em PHP
 
 $numeros = [5, 2, 8, 1, 9];
 
