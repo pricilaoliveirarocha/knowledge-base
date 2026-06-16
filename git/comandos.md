@@ -84,5 +84,6 @@ discard: `git stash drop`
 
 <div style="font-weight: bold;">
 <br>
-made with 💖 by Pricila Oliveira Rocha<br>If you like it, leave your heart at my repo for contributions and for coming back! 🫶🏻
+made with 💖 by Pricila Oliveira Rocha <br>
+If you like it, leave your heart at my repo for contributions and for coming back! 🫶🏻
 </div>
