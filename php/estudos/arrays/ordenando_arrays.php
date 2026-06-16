@@ -46,3 +46,12 @@ uksort($notas, function ($a, $b) {
 echo "Array ordenado por chave com uksort: \n";
 print_r($notas);
 echo "\n";
+
+
+//resumo do estudo:
+// sort() - Ordena em ordem crescente
+// rsort() - Ordena em ordem decrescente
+// asort() - Ordena em ordem crescente mantendo a associação
+// arsort() - Ordena em ordem decrescente mantendo a associação
+// uksort() - Ordena pela chave com lógica customizada
+// uasort() - Ordena pelo valor com lógica customizada
