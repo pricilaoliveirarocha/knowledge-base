@@ -62,7 +62,7 @@ This repository brings together my programming studies, practice, and challenges
 knowledge-base/
 |-- php/
 |   `-- estudos/
-|       `-- 01-variaveis.php
+|   `-- desafios/
 `-- README.md
 ```
 
