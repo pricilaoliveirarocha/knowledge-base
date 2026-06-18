@@ -29,9 +29,13 @@ $alunos = [
 ];
 
 // Contando o número de elementos no array multidimensional usando count() recursivamente
-$totalAlunos = count($alunos, COUNT_RECURSIVE);
-echo "Total de alunos: " . $totalAlunos . "\n";
+$pessoas = count($pessoas, COUNT_RECURSIVE);
 
+// A assinatura do count é count(array|Countable $value, int $mode = COUNT_NORMAL): int
+
+echo "Total de pessoas com COUNT_RECURSIVE: " . $pessoas . "\n";
+
+echo "Total de alunos com COUNT_RECURSIVE: " . count($alunos, COUNT_RECURSIVE) . "\n";
 
 // Funções build-in para contar elementos em arrays em PHP:
 // 1. count() - Conta o número de elementos em um array
