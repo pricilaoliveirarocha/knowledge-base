@@ -1,74 +1,104 @@
-<!-- Controles de fluxos em PHP -->
-<!-- Em PHP, o controle de fluxo é feito através de estruturas de decisão e loops. As principais estruturas de controle de fluxo incluem: if, else, elseif, switch, while, do-while, for, foreach -->
-
 <?php
 
+declare(strict_types=1);
+
+/*
+    Controles de fluxo em PHP
+
+    O controle de fluxo define quais instruções serão executadas e em qual
+    ordem. As principais estruturas são: if, else, elseif, switch, while,
+    do-while, for, foreach e match.
+*/
 
 /* ----------------------------------- If ----------------------------------- */
-// If-Else: A estrutura if-else permite executar um bloco de código se uma condição for verdadeira e outro bloco se a condição for falsa.
+// O if-else escolhe um bloco de acordo com o resultado de uma condição.
 $idade = 20;
 if ($idade >= 18) {
-    echo "Você é maior de idade.";
+    echo 'Você é maior de idade.' . PHP_EOL;
 } else {
-    echo "Você é menor de idade.";
+    echo 'Você é menor de idade.' . PHP_EOL;
 }
 
 /* --------------------------------- Else if -------------------------------- */
-// Elseif: A estrutura elseif permite verificar múltiplas condições.
+// O elseif permite verificar condições adicionais em sequência.
 $nota = 85;
 if ($nota >= 90) {
-    echo "Você tirou A.";
+    echo 'Você tirou A.' . PHP_EOL;
 } elseif ($nota >= 80) {
-    echo "Você tirou B.";
+    echo 'Você tirou B.' . PHP_EOL;
 } elseif ($nota >= 70) {
-    echo "Você tirou C.";
+    echo 'Você tirou C.' . PHP_EOL;
 } else {
-    echo "Você reprovou.";
+    echo 'Você reprovou.' . PHP_EOL;
 }
 
 /* --------------------------------- Switch --------------------------------- */
-// Switch: A estrutura switch permite executar diferentes blocos de código com base no valor de uma variável.
+// O switch seleciona um bloco de acordo com o valor informado.
 $dia = 3;
 switch ($dia) {
+    case 1:
+        echo 'Hoje é domingo.' . PHP_EOL;
+        break;
     case 2:
-        echo "Hoje é segunda-feira.";
+        echo 'Hoje é segunda-feira.' . PHP_EOL;
         break;
     case 3:
-        echo "Hoje é terça-feira.";
+        echo 'Hoje é terça-feira.' . PHP_EOL;
         break;
     case 4:
-        echo "Hoje é quarta-feira.";
+        echo 'Hoje é quarta-feira.' . PHP_EOL;
         break;
     case 5:
-        echo "Hoje é quinta-feira.";
+        echo 'Hoje é quinta-feira.' . PHP_EOL;
         break;
     case 6:
-        echo "Hoje é sexta-feira.";
+        echo 'Hoje é sexta-feira.' . PHP_EOL;
+        break;
+    case 7:
+        echo 'Hoje é sábado.' . PHP_EOL;
         break;
     default:
-        echo "Fim de semana!";
+        echo 'Dia inválido.' . PHP_EOL;
 }
 
 /* ---------------------------------- While --------------------------------- */
-// While: A estrutura while executa um bloco de código enquanto uma condição for verdadeira.
+// O while executa o bloco enquanto a condição for verdadeira.
 $contador = 0;
-while ($contador < 5) { // Enquanto o contador for menor que 5, o loop continuará executando.
-    echo "Contador: $contador\n";
-    $contador++; // Incrementa o contador em 1 a cada iteração.
+while ($contador < 5) {
+    echo "Contador: $contador" . PHP_EOL;
+    $contador++;
 }
 
 /* -------------------------------- Do-while -------------------------------- */
-// Do-While: A estrutura do-while executa um bloco de código pelo menos uma vez e depois verifica a condição.
+// O do-while executa o bloco antes de verificar a condição.
 $contador2 = 0;
 do {
-    echo "Contador2: $contador2\n";
+    echo "Contador 2: $contador2" . PHP_EOL;
     $contador2++;
-} while ($contador2 < 5); // O loop continuará enquanto o contador2 for menor que 5.
+} while ($contador2 < 5);
 
-// A diferença entre while e do-while é que o do-while garante que o bloco de código seja executado pelo menos uma vez, mesmo que a condição seja falsa na primeira verificação.
+// Por isso, o do-while executa ao menos uma vez, mesmo com uma condição falsa.
 
 /* ----------------------------------- For ---------------------------------- */
-// For: A estrutura for é usada para executar um bloco de código um número específico de vezes.
-for ($i = 0; $i < 5; $i++) { // O loop for inicializa a variável $i em 0, verifica se $i é menor que 5 e incrementa $i em 1 a cada iteração.
-    echo "For Loop: $i\n";
+// O for é útil quando início, condição e incremento são conhecidos.
+for ($indice = 0; $indice < 5; $indice++) {
+    echo "For: $indice" . PHP_EOL;
 }
+
+/* --------------------------------- Foreach -------------------------------- */
+// O foreach percorre os valores de um array e, opcionalmente, suas chaves.
+$linguagens = ['PHP', 'Python', 'JavaScript'];
+foreach ($linguagens as $indice => $linguagem) {
+    echo "$indice: $linguagem" . PHP_EOL;
+}
+
+/* ---------------------------------- Match --------------------------------- */
+// O match retorna um valor, não precisa de break e compara com ===.
+$cor = 'vermelho';
+$mensagem = match ($cor) {
+    'vermelho' => 'A cor é vermelha.',
+    'azul' => 'A cor é azul.',
+    'verde' => 'A cor é verde.',
+    default => 'Cor desconhecida.',
+};
+echo $mensagem . PHP_EOL;
