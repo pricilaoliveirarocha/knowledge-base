@@ -2,92 +2,61 @@
 
 [Português](#português) | [English](#english)
 
----
-
 ## Português
 
-Bem-vinda à minha base de conhecimento! ✨
+Base pessoal de estudos, exemplos e desafios de programação, atualmente com foco em PHP, Git e fundamentos de ciência da computação.
 
-Este repositório reúne meus estudos, práticas e desafios de programação, com foco atual em PHP e espaço para crescer para outras linguagens ao longo do tempo.
+### Conteúdo
 
----
+- [Git](git/guia-git.md): comandos e referências para controle de versão.
+- [PHP](php/guia-php.md): roteiro dos estudos e desafios em PHP.
+- [DSA](general/dsa/guia-dsa.md): estruturas de dados, algoritmos e técnicas de resolução de problemas.
+- [Variáveis em PHP](php/estudos/variaveis.php): tipos de dados, declarações e referências.
+- [Arrays em PHP](php/estudos/arrays/arrays.php): criação, contagem, manipulação e ordenação.
+- [Desafios de PHP](php/desafios/guia-desafios-php.md): exercícios para praticar os conceitos estudados.
 
-## 📁 Estrutura do Projeto
+### Estrutura
 
 ```text
 knowledge-base/
+|-- general/
+|   `-- dsa/
+|       `-- guia-dsa.md
+|-- git/
+|   |-- guia-git.md
+|   `-- comandos.md
 |-- php/
-|   `-- estudos/
-|       `-- 01-variaveis.php
+|   |-- guia-php.md
+|   |-- estudos/
+|   |   |-- variaveis.php
+|   |   `-- arrays/
+|   |       |-- arrays.php
+|   |       |-- contando_arrays.php
+|   |       |-- manipulando_arrays.php
+|   |       |-- ordenando_arrays.php
+|   |       `-- populando_arrays.php
+|   `-- desafios/
+|       `-- guia-desafios-php.md
 `-- README.md
 ```
 
-No momento, a base começa com um primeiro arquivo de estudos em PHP e será expandida gradualmente.
+### Objetivo
 
----
+Registrar conceitos, exemplos executáveis e exercícios práticos para acompanhar minha evolução como desenvolvedora.
 
-## 🎯 Objetivo
-
-Centralizar minha jornada de aprendizado em programação, registrando conceitos, exemplos e desafios práticos para acompanhar minha evolução como desenvolvedora.
-
----
-
-## 🧠 Organização
-
-Conforme o repositório crescer, cada linguagem terá duas pastas principais:
-
-- `estudos/`: anotações, exemplos e práticas iniciais.
-- `desafios/`: exercícios para fixar conceitos e desenvolver lógica.
-
----
-
-<small>
-Este projeto representa uma jornada contínua de aprendizado, prática e evolução.
-Com organização, constância e curiosidade, cada linha de código se transforma em crescimento. 💻✨
-</small>
-
----
+Os materiais de cada assunto ficam organizados em um índice próprio. Novas pastas devem ser criadas quando houver conteúdo para elas.
 
 ## English
 
-Welcome to my knowledge base! ✨
+Personal knowledge base for programming notes, examples, and challenges, currently focused on PHP, Git, and computer science fundamentals.
 
-This repository brings together my programming studies, practice, and challenges, with a current focus on PHP and room to grow into other languages over time.
+### Contents
 
----
+- [Git](git/guia-git.md): commands and version control references.
+- [PHP](php/guia-php.md): roadmap for PHP studies and challenges.
+- [DSA](general/dsa/guia-dsa.md): data structures, algorithms, and problem-solving techniques.
+- [PHP variables](php/estudos/variaveis.php): data types, declarations, and references.
+- [PHP arrays](php/estudos/arrays/arrays.php): creation, counting, manipulation, and sorting.
+- [PHP challenges](php/desafios/guia-desafios-php.md): exercises based on the studied concepts.
 
-## 📁 Project Structure
-
-```text
-knowledge-base/
-|-- php/
-|   `-- estudos/
-|   `-- desafios/
-`-- README.md
-```
-
-Right now, the knowledge base starts with a first PHP study file and will expand gradually over time.
-
-> Folder names are kept in Portuguese to match the repository's structure.
-
----
-
-## 🎯 Purpose
-
-To centralize my programming learning journey by documenting concepts, examples, and practical challenges while tracking my growth as a developer.
-
----
-
-## 🧠 Organization
-
-As the repository grows, each language will be organized into two main folders:
-
-- `estudos/`: notes, examples, and beginner-friendly practice.
-- `desafios/`: exercises to reinforce concepts and improve logic.
-
----
-
-<small>
-This project represents a continuous journey of learning, practice, and growth.
-With organization, consistency, and curiosity, every line of code becomes progress. 💻✨
-</small>
+Folder names remain in Portuguese to match the repository structure. Each subject has its own index to keep navigation simple as the repository grows.
